@@ -130,10 +130,10 @@ screen -S aztec
 ```
 aztec start --node --archiver --sequencer \
   --network alpha-testnet \
-  --l1-rpc-urls RPC_URL  \
-  --l1-consensus-host-urls BEACON_URL \
-  --sequencer.validatorPrivateKey 0xYourPrivateKey \
-  --sequencer.coinbase 0xYourAddress \
+  --l1-rpc-urls "RPC_URL"  \
+  --l1-consensus-host-urls "BEACON_URL" \
+  --sequencer.validatorPrivateKey "0xYourPrivateKey" \
+  --sequencer.coinbase "0xYourAddress" \
   --p2p.p2pIp IP
   --p2p.maxTxPoolSize 1000000000
 ```
@@ -189,10 +189,10 @@ Then you'll get your `Apprentice` Role
 ## 12. Register Validator
 ```bash
 aztec add-l1-validator \
-  --l1-rpc-urls RPC_URL \
-  --private-key your-private-key \
-  --attester your-validator-address \
-  --proposer-eoa your-validator-address \
+  --l1-rpc-urls "RPC_URL" \
+  --private-key "your-private-key" \
+  --attester "your-validator-address" \
+  --proposer-eoa "your-validator-address" \
   --staking-asset-handler 0xF739D03e98e23A7B65940848aBA8921fF3bAc4b2 \
   --l1-chain-id 11155111
 ```
