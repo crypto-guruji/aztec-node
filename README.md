@@ -153,6 +153,43 @@ Replace the following variables before you Run Node:
 ## 10. Sync Node
 After entering the command, your node starts running, It takes a few minutes for your node to get synced
 
+# Update on Aztec: Alpha Testnet .8
+ This update **requires a database reset and full re-sync.**  
+ Restart ASAP to avoid missing **attestations** or **block proposals.**
+
+
+Press `CTRL + C`  to stop  Node 
+![image](https://github.com/user-attachments/assets/379683c8-013a-445d-ae89-9792ce354e01)
+
+
+### Delete Database
+```
+rm -rf ~/.aztec/alpha-testnet/data/ 
+```
+
+### Update NODE
+
+```
+aztec-up alpha-testnet
+```
+![image](https://github.com/user-attachments/assets/cebd314a-d045-404a-a0c3-548e594187e4)
+
+
+
+RESTART VALIDATOR WITH COMMAND
+```
+aztec start \
+  --network <network-name> \
+  --l1-rpc-urls "<rpc-url>" \
+  --l1-consensus-host-urls "<consensus-url>" \
+  --sequencer.validatorPrivateKey "<private-key>" \
+  --p2p.p2pIp "<local-ip>" \
+  --p2p.maxTxPoolSize 1000000000 
+  --archiver \
+  --node \
+  --sequencer
+```
+
 ## 11. Get Role
 Go to the discord channel :[operators| start-here](https://discord.com/channels/1144692727120937080/1367196595866828982/1367323893324582954) and follow the prompts, You can continue the guide with my commands if you need help.
 
